@@ -14,7 +14,7 @@ const FlightsTable = () => {
   const flightsDep = useSelector(depFlightListSelector)
   const flightsArr = useSelector(arrFlightListSelector)
   const dispatch = useDispatch()
-  const getFlightDate = (value, date) => dispatch(getFlightsList(value, date))
+  const getFlightData = (value, date) => dispatch(getFlightsList(value, date))
 
   const { pathname, search } = useLocation()
 
@@ -22,7 +22,7 @@ const FlightsTable = () => {
     const searchValue = new URLSearchParams(search).get('search') || ''
     const searchDate = new URLSearchParams(search).get('date')
 
-    getFlightDate(searchValue, searchDate)
+    getFlightData(searchValue, searchDate)
   }, [search])
 
   let flightList = []
