@@ -2,10 +2,10 @@ import moment from 'moment'
 import { fetchFlightListData } from './gateway'
 import { GET_FLIGHTS_LIST } from './types'
 
-const flightListRecieved = flightList => ({
+const flightListRecieved = flightsList => ({
   type: GET_FLIGHTS_LIST,
   payload: {
-    flightList,
+    flightsList,
   },
 })
 

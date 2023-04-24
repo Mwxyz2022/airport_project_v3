@@ -1,7 +1,10 @@
 import { GET_FLIGHTS_LIST } from './types'
 
 const initialState = {
-  flightsList: [],
+  flightsList: {
+    departure: [],
+    arrival: [],
+  },
 }
 
 const flightsListReducer = (state = initialState, action) => {
@@ -9,7 +12,7 @@ const flightsListReducer = (state = initialState, action) => {
     case GET_FLIGHTS_LIST:
       return {
         ...state,
-        flightsList: action.payload.flightList,
+        flightsList: action.payload.flightsList,
       }
 
     default:

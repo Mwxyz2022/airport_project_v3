@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 
-import './flightTable.scss'
+// import './flightTable.scss'
 
 import { getFlightStatus, terminalStyles } from './flightTableUtils'
 
@@ -13,6 +13,7 @@ import { arrFlightListSelector, depFlightListSelector } from '../../gateway/sele
 const FlightsTable = () => {
   const flightsDep = useSelector(depFlightListSelector)
   const flightsArr = useSelector(arrFlightListSelector)
+  console.log(flightsDep, flightsArr)
   const dispatch = useDispatch()
   const getFlightData = (value, date) => dispatch(getFlightsList(value, date))
 
