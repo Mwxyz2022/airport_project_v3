@@ -14,7 +14,6 @@ const flightsListReducer = (state = initialState, action) => {
         ...state,
         flightsList: action.payload.flightsList,
       }
-
     default:
       return state
   }
